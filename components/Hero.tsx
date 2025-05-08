@@ -1,17 +1,20 @@
+"use client";
+
 export default function Hero() {
+
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 animate-gradient-shift"></div>
+    <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 relative overflow-hidden transition-colors duration-500 dark:bg-gray-900">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 animate-gradient-shift dark:opacity-80"></div>
 
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-white blur-3xl animate-float-slow"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-48 h-48 rounded-full bg-blue-300 blur-3xl animate-float"></div>
-        <div className="absolute top-1/3 right-1/4 w-56 h-56 rounded-full bg-pink-200 blur-3xl animate-float-slow-reverse"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-40 h-40 rounded-full bg-indigo-300 blur-3xl animate-float-medium"></div>
-        <div className="absolute top-2/3 right-1/2 w-32 h-32 rounded-full bg-cyan-200 blur-2xl animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-white blur-3xl animate-float-slow dark:bg-blue-300"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-48 h-48 rounded-full bg-blue-300 blur-3xl animate-float dark:bg-indigo-300"></div>
+        <div className="absolute top-1/3 right-1/4 w-56 h-56 rounded-full bg-pink-200 blur-3xl animate-float-slow-reverse dark:bg-pink-400"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-40 h-40 rounded-full bg-indigo-300 blur-3xl animate-float-medium dark:bg-purple-400"></div>
+        <div className="absolute top-2/3 right-1/2 w-32 h-32 rounded-full bg-cyan-200 blur-2xl animate-pulse dark:bg-cyan-400"></div>
       </div>
 
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIgLz48L3N2Zz4=')] opacity-40"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIgLz48L3N2Zz4=')] opacity-40 dark:opacity-20"></div>
 
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/6 left-1/6 text-white opacity-10 text-6xl animate-float-slow">
@@ -42,14 +45,14 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="mb-4 inline-block">
-          <span className="px-4 py-1 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium border border-white/20 shadow-lg">
+          <span className="px-4 py-1 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium border border-white/20 shadow-lg dark:bg-gray-800/30 dark:border-gray-700/30">
             #1 Software License Marketplace
           </span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight drop-shadow-lg">
           Turn Your{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-white">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-white dark:from-blue-300 dark:to-white">
             Unused Software
           </span>{" "}
           Into Cash
@@ -63,7 +66,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#contact"
-            className="inline-flex items-center bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
+            className="inline-flex items-center bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group dark:bg-gray-800 dark:text-blue-300 dark:hover:bg-gray-700"
           >
             Sell My Licenses
             <svg
@@ -84,14 +87,14 @@ export default function Hero() {
 
           <a
             href="#learn-more"
-            className="inline-flex items-center bg-transparent text-white border border-white/30 backdrop-blur-sm px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 shadow-lg"
+            className="inline-flex items-center bg-transparent text-white border border-white/30 backdrop-blur-sm px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 shadow-lg dark:border-gray-500/30 dark:hover:bg-gray-800/30"
           >
             Learn More
           </a>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-wrap justify-center gap-8 items-center">
-          <p className="text-blue-100 text-sm font-medium">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-wrap justify-center gap-8 items-center dark:border-gray-700/30">
+          <p className="text-blue-100 text-sm font-medium dark:text-blue-200">
             Trusted by leading companies:
           </p>
           <div className="flex gap-8 opacity-70 grayscale hover:grayscale-0 transition-all">
@@ -132,8 +135,8 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute top-0 left-0 w-32 h-32 border-l-4 border-t-4 border-white/10 rounded-br-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-32 h-32 border-r-4 border-b-4 border-white/10 rounded-tl-3xl"></div>
+      <div className="absolute top-0 left-0 w-32 h-32 border-l-4 border-t-4 border-white/10 rounded-br-3xl dark:border-gray-700/30"></div>
+      <div className="absolute bottom-0 right-0 w-32 h-32 border-r-4 border-b-4 border-white/10 rounded-tl-3xl dark:border-gray-700/30"></div>
     </section>
   );
 }
