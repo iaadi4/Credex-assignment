@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import ClientThemeProvider from "@/components/ClientThemeProvider";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "SoftSell - Turn Unused Software Licenses Into Cash",
