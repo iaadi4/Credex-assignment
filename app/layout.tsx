@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import ClientThemeProvider from "@/components/ClientThemeProvider";
-import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "SoftSell - Turn Unused Software Licenses Into Cash",
+  description:
+    "SoftSell helps businesses resell unused licenses quickly, securely, and at fair market value.",
+};
 
 export default function RootLayout({
   children,
@@ -9,8 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <script dangerouslySetInnerHTML={{
-          __html: `
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
             (function() {
               try {
                 const storedTheme = localStorage.getItem('theme');
@@ -23,13 +31,12 @@ export default function RootLayout({
                 }
               } catch (e) {}
             })();
-          `
-        }} />
+          `,
+          }}
+        />
       </head>
       <body>
-        <ClientThemeProvider>
-          {children}
-        </ClientThemeProvider>
+        <ClientThemeProvider>{children}</ClientThemeProvider>
       </body>
     </html>
   );
